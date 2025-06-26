@@ -5,8 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function SelectorCompo
-() {
+export default function SelectorCompo() {
   const [age, setAge] = React.useState('');
 
   const handleChange = (event) => {
@@ -16,7 +15,7 @@ export default function SelectorCompo
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Select</InputLabel>
+        <InputLabel id="demo-simple-select-label">Age</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
