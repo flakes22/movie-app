@@ -1,9 +1,10 @@
-import NavBar from './components/NavBar';
+import Home from './pages/home';
+import {Routes, Route} from 'react-dom/client';
 import './App.css';
 
 function App() {
   return (
-   <NavBar></NavBar>
+   <Home></Home>
   );
 }
 
