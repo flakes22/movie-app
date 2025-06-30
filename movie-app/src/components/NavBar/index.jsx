@@ -9,7 +9,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import SelectorCompo from '../SelectorCompo';
 import { useDispatch } from 'react-redux';
 import { setSearchValue } from '../../slice/movieSlice';
-
+import { useSelector } from 'react-redux';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -52,11 +52,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function NavBar() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  
   const dispatch= useDispatch();
 
+  const {searchValue} = useSelector(state=>state.movies)
   const onSearchChange=(e)=>{
-    
+    dispatch(setSearchValue(e.target.value))
   }
   return (
     <Box sx={{ flexGrow: 1 }}>
