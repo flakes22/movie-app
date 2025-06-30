@@ -12,7 +12,7 @@ const Home = () => {
 
   const { movies,searchValue } = useSelector((state) => state.movies);
 
-  const filterByMovieName= getMoviesBySearch(movies,searchValue);
+   const filterByMovieName= getMoviesBySearch(movies,searchValue);
 
   useEffect(() => {
     dispatch(getMovies());
