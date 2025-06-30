@@ -24,7 +24,7 @@ const Home = () => {
         {movies?.length > 0 &&
           movies.map((movie, index) => (
             <MovieCard
-              key={movie.id || `${movie.title}-${index}`} // Prefer movie.id, fallback to composite key
+              key={movie.id || `${movie.title}-${index}`}
               movie={movie}
             />
           ))}
