@@ -16,14 +16,15 @@ export default function MovieCard({ movie }) {
   const { Title, Poster, Director, Writer,Genre,imdbRating,Runtime } = movie;
 
   return (
-    <Grid item xs={3}>
-    <Card sx={{ maxWidth: 345 }}>
+    <Grid item xs={4} sx={{ display: 'flex' }}>
+<Card sx={{ maxWidth: 345, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+
       <CardMedia
         sx={{ height: 200 }}
         image={Poster || "https://via.placeholder.com/300x140?text=No+Image"}
         title={Title}
       />
-      <CardContent>
+      <CardContent sx={{ flexGrow: 1 }}>
         <Typography gutterBottom variant="h5" component="div">
           {Title || "Untitled"}
         </Typography>

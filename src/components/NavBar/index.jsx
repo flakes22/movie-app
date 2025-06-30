@@ -7,6 +7,9 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import SelectorCompo from '../SelectorCompo';
+import { useDispatch } from 'react-redux';
+import { setSearchValue } from '../../slice/movieSlice';
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -50,11 +53,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function NavBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const dispatch= useDispatch();
 
-  const isMenuOpen = Boolean(anchorEl);
-
-
+  const onSearchChange=(e)=>{
+    
+  }
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{backgroundColor:"#123453"}}>
@@ -68,7 +71,7 @@ export default function NavBar() {
           >
             Movies App
           </Typography>
-          <Search>
+          <Search onChange={onSearchChange}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
