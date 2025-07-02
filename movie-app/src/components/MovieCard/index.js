@@ -17,7 +17,7 @@ export default function MovieCard({ movie }) {
 
   return (
     <Grid item xs={4} sx={{ display: 'flex' }}>
-<Card sx={{ maxWidth: 345, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+<Card sx={{ maxWidth: 300, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
 
       <CardMedia
         sx={{ height: 200,width: 300 ,backgroundSize: 'cover',
