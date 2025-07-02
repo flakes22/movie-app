@@ -20,7 +20,8 @@ export default function MovieCard({ movie }) {
 <Card sx={{ maxWidth: 345, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
 
       <CardMedia
-        sx={{ height: 200 }}
+        sx={{ height: 200,width: 300 ,backgroundSize: 'cover',
+    backgroundPosition: 'center'}}
         image={Poster || "https://via.placeholder.com/300x140?text=No+Image"}
         title={Title}
       />
